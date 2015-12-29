@@ -1,15 +1,23 @@
-alert("Se ha cargado la extension");
-
-chrome.tabs.onCreated.addListener(function (tab) {
-  alert('La URL de la nueva pestaña es: ' + tab.url);
-});
-
-/*chrome.tabs.onRemoved.addListener(function (tab) {
-  alert('La URL de la pestaña cerrada es: ' + tab.url);
-})*/
-
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    if(tab.url.indexOf("google.es") != -1){
-        chrome.tabs.remove(tabId);
+chrome.browserAction.onClicked.addListener(function (tab) {
+  chrome.tabs.getSelected(null,function(tab) {
+    var tabLink = tab.url;
+    if(tabLink.slice(0,32) == 'https://www.youtube.com/watch?v='){
+      downloadVideo(tabLink);
     }
- });
+    else {
+      alert("No youtube!");
+      }
+    });
+  });
+
+    function downloadVideo (tabLink) {
+      chrome.tabs.create({url:'http://www.youtube-mp3.org/'});
+      chrome.tabs.executeScript(null,{
+        code:'var url = "'+tabLink+'";'
+      }, function () {
+        chrome.tabs.executeScript(null,{
+          file:"js/script.js"
+        });
+
+      });
+    }
