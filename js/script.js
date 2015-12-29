@@ -5,9 +5,7 @@ setTimeout(function () {
 	for(var i = 0; i < links.length;++i) {
 		var attr = links[i].href;
 		if(attr[52]=='t'){
-			window.location.href = attr;
-			break;
-		}
+			links[i].click();
+			}
 	}
-
 },500);
