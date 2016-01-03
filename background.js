@@ -10,19 +10,14 @@ chrome.browserAction.onClicked.addListener(function (tab) {
     });
   });
 
-    function downloadVideo (tabLink) {
-
-
-
+   function downloadVideo (tabLink) {
       chrome.tabs.create({url:'http://www.youtube-mp3.org/'});
-      chrome.tabs.getSelected(null, function (tab) {
-
+      chrome.tabs.executeScript(null,{
+        code:'var url = "'+tabLink+'";'
+      }, function () {
         chrome.tabs.executeScript(null,{
-          code:'var url = "'+tabLink+'";'
-          }, function () {
-            chrome.tabs.executeScript(null,{
-              file:"js/script.js"
-            });
-            });
-          });
-        }
+          file:"js/script.js"
+        });
+
+      });
+    }
