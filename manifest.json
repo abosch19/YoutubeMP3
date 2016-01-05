@@ -6,13 +6,13 @@
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_title": "Donwload!"
+    "default_title": "Donwload!",
+    "default_icon": "icons/2.png"
   },
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png" 
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/48.png" 
   },
   "background": {
     "scripts": [

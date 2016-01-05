@@ -5,6 +5,7 @@ setTimeout(function () {
 	for(var i = 0; i < links.length;++i) {
 		var attr = links[i].href;
 		if(attr[52]=='t'){
+			var finished = true;
 			links[i].click();
 			break;
 			}
