@@ -1,25 +1,23 @@
 {
   "manifest_version": 2,
 
-  "name": "MusicDownloader",
-  "description": "This extensions convert YouTube video to mp3",
+  "name": "YouMusic",
+  "description": "Convert to mp3 your favorite music on Youtube",
   "version": "1.0",
 
   "browser_action": {
-    "default_title": "Donwload!",
-    "default_icon": "icons/icon.png"
+    "default_icon": "icons/128.png"
   },
   "icons": {
     "16": "icons/16.png",
     "48": "icons/48.png",
-    "128": "icons/48.png" 
+    "128": "icons/128.png" 
   },
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"]
   },
   "permissions": [
-    "tabs"
+    "tabs",
+    "<all_urls>"
   ]
 }
