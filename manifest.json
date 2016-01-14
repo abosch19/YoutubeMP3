@@ -2,8 +2,8 @@
   "manifest_version": 2,
 
   "name": "YouMusic",
-  "description": "Convert to mp3 your favorite music on Youtube",
-  "version": "1.0",
+  "description": "Convert your favorite musci to MP3",
+  "version": "1.0.0",
 
   "browser_action": {
     "default_icon": "icons/128.png"
@@ -21,3 +21,4 @@
     "<all_urls>"
   ]
 }
+

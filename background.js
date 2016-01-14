@@ -25,9 +25,9 @@ function downloadMusic(tabLink) {
   var apiLink = "http://www.youtubeinmp3.com/fetch/?video="
   var link = apiLink + tabLink;
     chrome.tabs.create({url:link, active: false}, function (tab) {
-      chrome.tabs.executeScript(tab.id, {
-        code: 'document.getElementById("download").click();'
-      },function(){});
+      chrome.tabs.executeScript(tab.id,{
+        file: 'scripts/index.js'
+      }, function () {});
     });
 }
 
