@@ -7,7 +7,7 @@ YouMusic es una extensión de Google Chrome con la que puedes descarga tu musica
 Installation
 ------------
 _Se necesita [Google Chrome](https://www.google.es/chrome/browser/desktop/)_
-* Descargar proyecto de GitHub [![Download Zip](https://raw.githubusercontent.com/abosch19/YoutubeMP3/master/project/download.png)](https://github.com/abosch19/YoutubeMP3/archive/master.zip)
+* Descargar proyecto de GitHub [![Download Zip](https://raw.githubusercontent.com/abosch19/YoutubeMP3/master/project/downloadZip.png)](https://github.com/abosch19/YoutubeMP3/archive/master.zip)
 * Descomprimir la carpeta
 * Abrir Google Chrome -> [![Picture](https://raw.githubusercontent.com/abosch19/YoutubeMP3/master/project/config.png)]()
 -> Más Herramientas -> Extensiones
